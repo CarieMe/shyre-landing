@@ -28,18 +28,19 @@
     <meta property="og:image" content="{{getAppLogo()}}" />
     @endif
 
-    {{-- <link rel="icon" href="{{ getFaviconUrl() }}" type="image/png">--}}
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="{{ mix('assets/css/public.css') }}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/third-party.css') }}">
-    {{-- <link href="{{ asset('assets/css/front-custom.css') }}" rel="stylesheet" type="text/css">--}}
-    <link href="{{ asset('assets/css/front/front-custom.css') }}" rel="stylesheet" type="text/css">
+
+    <link href="{{ mix('assets/css/main.css') }}" rel="stylesheet" type="text/css">
+
+    <link href="{{ asset('assets/css/public.css') }}" rel="stylesheet" type="text/css">
 
     <script src="{{ mix('assets/js/front-third-party.js') }}"></script>
+
     <script src="{{ asset('assets/js/messages.js') }}"></script>
 
     <script src="{{ mix('assets/js/style-plugins.js') }}"></script>
+
+    <script src="{{ mix('assets/js/style.js') }}"></script>
 
     @php $langSession = Session::get('languageName');
     $frontLanguage = !isset($langSession) ? getSuperAdminSettingValue('default_language') : $langSession;
@@ -48,8 +49,6 @@
         let frontLanguage = "{{ $frontLanguage }}"
         Lang.setLocale(frontLanguage)
     </script>
-    <script src="{{ mix('assets/js/front-pages.js') }}"></script>
-    <script src="{{ mix('assets/js/style.js') }}"></script>
 
     {!! getSuperAdminSettingValue('extra_js_front') !!}
     @routes
@@ -61,27 +60,23 @@
     </script>
     <!--google analytics code-->
     @if(!empty($metas['google_analytics']))
-    <script>
-        {
-            !!$metas['google_analytics'] !!
-        }
-    </script>
+
     @endif
 </head>
 
 <body>
     <div class="sb-app">
-        <div class="sb-preloader">
-            <div class="sb-preloader-bg"></div>
-            <div class="sb-preloader-body">
+        <!-- <div class="sb-preloader"> -->
+        <!-- <div class="sb-preloader-bg"></div> -->
+        <!-- <div class="sb-preloader-body">
                 <div class="sb-loading">
                     <div class="sb-percent"><span class="sb-preloader-number" data-count="101">00</span><span>%</span></div>
                 </div>
                 <div class="sb-loading-bar">
                     <div class="sb-bar"></div>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
         <!-- preloader end -->
         <!-- click effect -->
         <div class="sb-click-effect"></div>
@@ -94,28 +89,6 @@
         @include('front.layouts.footer')
     </div>
 </body>
-
-
-
-<script>
-    (function(d, t) {
-        var BASE_URL = "http://127.0.0.1:3000";
-        var g = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-        g.src = BASE_URL + "/packs/js/sdk.js";
-        g.defer = true;
-        g.async = true;
-        s.parentNode.insertBefore(g, s);
-        g.onload = function() {
-            window.chatwootSDK.run({
-                websiteToken: 'SuegpTA6uy5n76ALXRVuNT6d',
-                baseUrl: BASE_URL
-            })
-        }
-    })(document, "script");
-</script>
-
-
 
 
 </html>

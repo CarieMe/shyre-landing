@@ -1,0 +1,81 @@
+@import "../variables.scss";
+
+
+@font-face {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 100;
+  src: url(../../../fonts/Font-100.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 200;
+  src: url(../../../fonts/Font-200.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../../fonts/Font-400.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(../../../fonts/Font-600.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(../../../fonts/Font-600.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url(../../../fonts/Font-800.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 900;
+  src: url(../../../fonts/Font-900.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Monoton";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../../../fonts/Monoton.woff) format("woff");
+  font-display: swap;
+}
+
+body {
+  background-color: $zhyre-ll;
+  padding: 0;
+  margin: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 15px;
+  color: $zhyre-dd;
+  font-weight: 200;
+}
+
+*:focus {
+  outline: inherit !important;
+}

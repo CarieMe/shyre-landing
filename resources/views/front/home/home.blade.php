@@ -5,81 +5,28 @@
 @section('content')
 
 <!-- HERO -->
-<section class="sb-banner sb-bdd">
+<section class="sb-banner">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="sb-main-title-frame">
-                    <div class="sb-main-title">
-                        <span class="sb-suptitle sb-mb-30 sb-fml">Hi, new friend!</span>
-                        <h1 class="sb-mb-30 sb-h1">WE DO NOT <span>COOK</span>, <br>WE <span>CREATE</span> YOUR <br>EMOTIONS!</h1>
-                        <p class="sb-text sb-text-lg sb-mb-30 sb-fmd">Consectetur numquam poro nemo veniam<br>eligendi rem adipisci quo modi.</p>
+        <div class="sb-main-title-frame">
+            <div class="sb-main-title text-center">
 
-                        <a href="menu-1.html" class="sb-btn sb-btn-outline">
-                            <span class="sb-icon">
-                                <img src="{{ asset('assets/ui/icons/card-l.svg') }}" alt="icon">
-                            </span>
-                            <span>Select card</span>
-                        </a>
+                <h1 class="sb-mb-30 sb-h1">LOYALTY SOARS <br> <span> WITH ZHYRE SUPPORT</span> <br> NEVER LOOSE A <br> CLIENT AGAIN!</h1>
+                <p class="sb-text sb-text-lg sb-mb-30 sb-fmd">Maximize Client Retention with Zhyre CRM - Elevate Engagement,
+                    <br> Deliver Exceptional Support, and Cultivate Lasting Connections.
+                </p>
+                <a href="menu-1.html" class="sb-btn sb-btn-filled">
+                    <span class="sb-icon">
+                        <img src="{{ asset('assets/ui/icons/card-l.svg') }}" alt="icon">
+                    </span>
+                    <span>Select card</span>
+                </a>
+                <a href="menu-1.html" class="sb-btn sb-btn-filled">
+                    <span class="sb-icon">
+                        <img src="{{ asset('assets/ui/icons/card-l.svg') }}" alt="icon">
+                    </span>
+                    <span>Select card</span>
+                </a>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="sb-illustration-1">
-                    <img src="assets/ui/products/pr.png" alt="girl" class="sb-girl">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="sb-banner sb-bdl sec-pad">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7">
-                <!-- main title -->
-                <div class="sb-main-title-frame">
-                    <div class="sb-main-title">
-                        <h2 class="sb-mb-30 sb-capital">Get in <span class="sb-fml">with</span> vkardz</h2>
-                        <p class="sb-text sb-text-lg sb-mb-30">Consectetur numquam poro nemo veniam<br>eligendi rem adipisci quo modi.</p>
-                    </div>
-                </div>
-                <!-- main title end -->
-            </div>
-            <div class="col-lg-5">
-                <div class="sb-contact-form-frame">
-                    <div class="sb-form-content">
-                        <div class="sb-main-content">
-                            <h3 class="sb-mb-30">Send Message</h3>
-                            <form id="form">
-                                <div class="sb-group-input">
-                                    <input type="text" name="name" required>
-                                    <span class="sb-bar"></span>
-                                    <label>Name</label>
-                                </div>
-                                <div class="sb-group-input">
-                                    <input type="email" name="email" required>
-                                    <span class="sb-bar"></span>
-                                    <label>Email</label>
-                                </div>
-                                <div class="sb-group-input">
-                                    <textarea name="text" required></textarea>
-                                    <span class="sb-bar"></span>
-                                    <label>Message</label>
-                                </div>
-                                <p class="sb-text sb-text-xs sb-mb-30">*We promise not to disclose your <br>personal information to third parties.</p>
-                                <!-- button -->
-                                <button class="sb-btn sb-cf-submit sb-show-success">
-
-                                    <span>Send</span>
-                                </button>
-                                <!-- button end -->
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
             </div>
         </div>
     </div>

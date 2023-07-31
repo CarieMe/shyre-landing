@@ -1,6 +1,4 @@
-
- 
-<div class="sb-top-bar-frame sb-bdd">
+<div class="sb-top-bar-frame">
     <!-- <div class="sb-top-bar-bg"></div> -->
     <div class="container">
         <div class="sb-top-bar">
