@@ -1,0 +1,16 @@
+// IMPORT PLUGIN CSS
+@import "../front/plugin/fancybox.scss";
+@import "../front/plugin/swiper.scss";
+@import "../front/plugin/carousel.scss";
+
+// IMPORT MAIN CSS
+@import "../front/style/common.scss";
+@import "../front/style/content.scss";
+@import "../front/style/frame.scss";
+@import "../front/style/illustration.scss";
+@import "../front/style/preloader.scss";
+@import "../front/style/shop.scss";
+
+//NEW
+@import "../front/style/new.scss";
+@import "../front/style/auth.scss";

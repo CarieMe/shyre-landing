@@ -1,0 +1,363 @@
+@import "../../../../assets/scss/front/variables.scss";
+
+.sb-auth {
+    background-color: $dark-dark;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sb-auth-hero {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+}
+
+
+
+.sb-auth-frame {
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    background-color: #FFFFFF;
+    padding: 30px;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.1);
+}
+
+.sb-auth-back {
+    display: flex;
+    align-items: center;
+}
+
+.sb-auth-back span {
+    margin-right: 5px;
+    color: $main-light;
+}
+
+
+.sb-auth-back a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $light-dark;
+
+    &:hover {
+        color: $main-light;
+    }
+
+}
+
+.sb-auth-title {
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.2px;
+    padding-top: 30px;
+    color: $main-light;
+}
+
+.sb-auth-sub {
+    font-size: 14px;
+    font-weight: 100px;
+    text-align: center;
+    padding-bottom: 20px;
+    letter-spacing: 1.2px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.sb-auth-border {
+    position: relative;
+    border: dotted 1px $main-light
+}
+
+.sb-auth-content {
+    width: 100%;
+    padding: 30px;
+}
+
+
+.sb-auth-logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.sb-auth-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+// INPUT 
+
+.sb-input {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.sb-row-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sb-row-input .left-content {
+    display: flex;
+    align-items: center;
+}
+
+
+.sb-row-input .link {
+    color: $main-light;
+    text-decoration: none;
+    margin-left: auto;
+    font-size: 14px;
+
+    &:hover {
+        color: $light-dark;
+    }
+}
+
+
+.sb-input.sb-group-with-btn button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50px;
+    border: none;
+    background-color: #6F6F87;
+    transition: 0.3s ease-in-out;
+}
+
+.sb-input.sb-group-with-btn button img {
+    width: 20px;
+}
+
+.sb-input.sb-group-with-btn button:hover {
+    filter: brightness(110%);
+}
+
+.sb-input input,
+.sb-input textarea {
+    height: 50px;
+    position: relative;
+    padding: 0 20px;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: none;
+    color: $light-dark;
+    background-color: $dark-mid;
+}
+
+.sb-input input:focus~.sb-bar:before,
+.sb-input textarea:focus~.sb-bar:before {
+    width: 100%;
+}
+
+.sb-input textarea {
+    padding-top: 15px;
+    height: 100px;
+}
+
+.sb-input input:focus,
+.sb-input textarea:focus {
+    outline: none;
+    border: rgba(173, 151, 79, 0.2);
+    background-color: $main-opa;
+    color: $light-light;
+}
+
+.sb-input label {
+    font-size: 14px;
+    color: #6F6F87;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.sb-input input:focus~label,
+.sb-input input:valid~label,
+.sb-input textarea:focus~label,
+.sb-input textarea:valid~label {
+    top: -25px;
+    left: 0;
+    font-size: 14px;
+    color: $light-dark
+}
+
+.sb-input input:valid~label:after {
+    margin-left: 5px;
+    font-weight: 300;
+    content: "\f058";
+}
+
+.sb-input input:valid~.sb-bar:before {
+    width: 100%;
+}
+
+.sb-input input:invalid~label:after {
+    transform: scale(0);
+}
+
+.sb-input .sb-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.sb-input .sb-bar:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #6F6F87;
+    transition: 0.2s ease all;
+}
+
+.sb-input .sb-bar:before {
+    left: 0;
+}
+
+
+
+.sb-success-result {
+    pointer-events: none;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: 0.4s ease-in-out;
+}
+
+.sb-success-result img {
+    width: 80%;
+}
+
+.sb-success-result .sb-success-title {
+    font-size: 32px;
+    letter-spacing: -1px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.sb-success-result.sb-active {
+    pointer-events: all;
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .sb-contact-form-frame {
+        margin-top: 60px;
+        margin-bottom: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sb-contact-form-frame {
+        padding: 0;
+    }
+
+    .sb-contact-form-frame .sb-form-content {
+        border: none;
+    }
+}
+
+
+
+
+
+
+.sb-row-input .checkbox {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sb-row-input .checkbox input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.sb-row-input .checkbox__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background: $main-opa;
+}
+
+.sb-row-input .checkbox:hover input~.checkbox__indicator,
+.sb-row-input .checkbox input:focus~.checkbox__indicator {
+    background: $main-opa;
+}
+
+.sb-row-input .checkbox input:checked~.checkbox__indicator {
+    background: #2aa1c0;
+}
+
+.sb-row-input .checkbox:hover input:not([disabled]):checked~.checkbox__indicator,
+.sb-row-input .checkbox input:checked:focus~.checkbox__indicator {
+    background: $main-dark;
+}
+
+.sb-row-input .checkbox input:disabled~.checkbox__indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.sb-row-input .checkbox__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.sb-row-input .checkbox input:checked~.checkbox__indicator:after {
+    display: block;
+}
+
+.sb-row-input .checkbox--checkbox .checkbox__indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.sb-row-input .checkbox--checkbox input:disabled~.checkbox__indicator:after {
+    border-color: #7b7b7b;
+}

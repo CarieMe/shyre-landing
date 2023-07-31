@@ -1,2 +1,2 @@
-User-agent: *
+Sitemap: http://www.vcard.com/sitemap.xmlUser-agent: *
 Disallow:
