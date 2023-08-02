@@ -1,6 +1,171 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./resources/assets/js/style/chat.js":
+/*!*******************************************!*\
+  !*** ./resources/assets/js/style/chat.js ***!
+  \*******************************************/
+/***/ (() => {
+
+$(function () {
+  var animate = document.querySelectorAll(".animate");
+  var submit = document.querySelector(".submit");
+  var text = document.querySelector(".sendbox input");
+  var chatbox = document.querySelector(".chatbox");
+  submit.addEventListener("click", sendmessage);
+  text.addEventListener("keyup", function (e) {
+    console.log(e);
+    if (e.key === 'Enter' || e.keyCode === 13) sendmessage();
+  });
+  start_animation();
+  function start_animation() {
+    var _loop = function _loop(i) {
+      setTimeout(function () {
+        animate[i].classList.add("animated");
+      }, 300 * i + 300);
+    };
+    for (var i = 0; i < animate.length; i++) {
+      _loop(i);
+    }
+  }
+  function sendmessage() {
+    data = text.value.trim();
+    if (data != "") chatbox.innerHTML += '<div class="eachmessage sent animated"><p>' + data + '</p></div>';
+    text.value = "";
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/assets/js/style/graph.js":
+/*!********************************************!*\
+  !*** ./resources/assets/js/style/graph.js ***!
+  \********************************************/
+/***/ (() => {
+
+var _smoothGraph;
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var smoothGraph = (_smoothGraph = {
+  container: null,
+  svg: null,
+  defs: null,
+  width: null,
+  height: null,
+  dataHeight: null,
+  xSpacing: null,
+  ySpacing: null,
+  pathSmoothing: null
+}, _defineProperty(_smoothGraph, "defs", null), _defineProperty(_smoothGraph, "new", function _new(_ref) {
+  var _ref$container = _ref.container,
+    container = _ref$container === void 0 ? null : _ref$container,
+    _ref$heightInPx = _ref.heightInPx,
+    heightInPx = _ref$heightInPx === void 0 ? 100 : _ref$heightInPx,
+    _ref$dataHeight = _ref.dataHeight,
+    dataHeight = _ref$dataHeight === void 0 ? 100 : _ref$dataHeight;
+  this.errorCondition(container === null, 'No target container was specified.\n Use querySelector syntax to target a container element:\n smoothGraph.new({container: "#my-container"});\n');
+  this.setContainer(container);
+  this.setDimensions(heightInPx, dataHeight);
+  var svg = this.createSVG(this.width, this.height);
+  this.svg = this.container.appendChild(svg);
+  this.appendMaskToSvg();
+}), _defineProperty(_smoothGraph, "draw", function draw(_ref2) {
+  var _this = this;
+  var _ref2$dataPoints = _ref2.dataPoints,
+    dataPoints = _ref2$dataPoints === void 0 ? null : _ref2$dataPoints,
+    _ref2$color = _ref2.color,
+    color = _ref2$color === void 0 ? 'black' : _ref2$color,
+    _ref2$strokeWidth = _ref2.strokeWidth,
+    strokeWidth = _ref2$strokeWidth === void 0 ? 1 : _ref2$strokeWidth,
+    _ref2$pathSmoothing = _ref2.pathSmoothing,
+    pathSmoothing = _ref2$pathSmoothing === void 0 ? 0 : _ref2$pathSmoothing;
+  this.errorCondition(dataPoints === null, 'No data points were entered for the graph.\n Specify the data points in an array:\n smoothGraph.draw({dataPoints: [1, 2, 3, 4]});\n');
+  this.setXSpacing(dataPoints.length);
+  this.setPathSmoothing(pathSmoothing);
+  ['fill', 'stroke'].forEach(function (drawType) {
+    var attributeLabel = drawType === 'fill' ? 'mask' : 'stroke-width';
+    var attributeValue = drawType === 'fill' ? 'url(#gradient-mask)' : strokeWidth;
+    var d = _this.createPathPoints(dataPoints, drawType);
+    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttributeNS(null, 'd', d);
+    path.setAttributeNS(null, "".concat(drawType), color);
+    path.setAttributeNS(null, attributeLabel, attributeValue);
+    _this.svg.appendChild(path);
+  });
+}), _defineProperty(_smoothGraph, "createSVG", function createSVG(width, height) {
+  var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+  svg.setAttribute('fill', 'none');
+  svg.setAttribute('viewBox', "0 0 ".concat(this.width, " ").concat(this.height));
+  return svg;
+}), _defineProperty(_smoothGraph, "appendMaskToSvg", function appendMaskToSvg() {
+  this.appendDefsToSvg();
+  this.defs.innerHTML = "<linearGradient id=\"gradient\" gradientTransform=\"rotate(90)\"><stop offset=\"0\" stop-color=\"white\" stop-opacity=\"0.35\" /><stop offset=\"1\" stop-color=\"white\" stop-opacity=\"0\" /></linearGradient><mask id=\"gradient-mask\"><rect x=\"0\" y=\"0\" width=\"".concat(this.width, "\" height=\"").concat(this.height, "\" fill=\"url(#gradient)\" /></mask>");
+}), _defineProperty(_smoothGraph, "appendDefsToSvg", function appendDefsToSvg() {
+  var defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+  this.defs = this.svg.appendChild(defs);
+}), _defineProperty(_smoothGraph, "createPathPoints", function createPathPoints(dataPoints, drawType) {
+  var d = '';
+  for (var i = 0; i < dataPoints.length; i++) {
+    var marker = i === 0 ? 'M' : 'L';
+    var x1 = i * this.xSpacing;
+    var y1 = this.height - dataPoints[i] * this.ySpacing;
+    var x2 = (i + 1) * this.xSpacing;
+    var y2 = this.height - dataPoints[i + 1] * this.ySpacing;
+    if (i !== dataPoints.length - 1) {
+      d += "".concat(marker, " ").concat(x1, " ").concat(y1, " C ").concat(x1 + this.pathSmoothing, " ").concat(y1, " ").concat(x2 - this.pathSmoothing, " ").concat(y2, " ").concat(x2, " ").concat(y2, " ");
+    }
+  }
+  if (drawType === 'fill') {
+    d += "L ".concat(this.width, " ").concat(this.height, " L 0 ").concat(this.height, " L 0 ").concat(this.height - dataPoints[0] * this.ySpacing);
+  }
+  return d;
+}), _defineProperty(_smoothGraph, "setContainer", function setContainer(container) {
+  this.container = document.querySelector(container);
+}), _defineProperty(_smoothGraph, "setDimensions", function setDimensions(heightInPx, dataHeight) {
+  this.width = this.container.offsetWidth;
+  this.height = heightInPx;
+  this.dataHeight = dataHeight;
+  this.ySpacing = heightInPx / dataHeight;
+}), _defineProperty(_smoothGraph, "setXSpacing", function setXSpacing(dataPointsLength) {
+  this.xSpacing = this.width / (dataPointsLength - 1);
+}), _defineProperty(_smoothGraph, "setPathSmoothing", function setPathSmoothing(smoothingAmount) {
+  this.pathSmoothing = this.xSpacing / 10 * smoothingAmount;
+}), _defineProperty(_smoothGraph, "errorCondition", function errorCondition(condition, errorMessage) {
+  if (condition) {
+    throw new Error(errorMessage);
+  }
+}), _smoothGraph);
+
+// Function to initialize the smoothGraph after the DOM is fully loaded
+function initializeSmoothGraph() {
+  smoothGraph["new"]({
+    container: '#graph-container',
+    heightInPx: 350,
+    dataHeight: 100
+  });
+  smoothGraph.draw({
+    dataPoints: [20, 60, 40, 10, 80, 50, 10],
+    color: '#f99048',
+    strokeWidth: 1,
+    pathSmoothing: 5
+  });
+  smoothGraph.draw({
+    dataPoints: [10, 40, 20, 10, 70, 90, 10],
+    color: '#f99048',
+    strokeWidth: 4,
+    pathSmoothing: 5
+  });
+}
+
+// Attach the initializeSmoothGraph function to the window.onload event
+window.onload = initializeSmoothGraph;
+
+/***/ }),
+
 /***/ "./resources/assets/js/style/style-common.js":
 /*!***************************************************!*\
   !*** ./resources/assets/js/style/style-common.js ***!
@@ -386,6 +551,11 @@ $(document).ready(function () {
       }
     });
   }, 400);
+});
+$(document).ready(function () {
+  $('.btn-start').click(function () {
+    $('.step-wrapper').toggleClass('move-line');
+  });
 });
 
 /***/ }),
@@ -887,6 +1057,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["assets/css/public"], () => (__webpack_require__("./resources/assets/js/style/chat.js")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/public"], () => (__webpack_require__("./resources/assets/js/style/graph.js")))
 /******/ 	__webpack_require__.O(undefined, ["assets/css/public"], () => (__webpack_require__("./resources/assets/js/style/style-common.js")))
 /******/ 	__webpack_require__.O(undefined, ["assets/css/public"], () => (__webpack_require__("./resources/assets/js/style/style-loader.js")))
 /******/ 	__webpack_require__.O(undefined, ["assets/css/public"], () => (__webpack_require__("./resources/assets/js/style/style-menu.js")))

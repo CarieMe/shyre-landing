@@ -1,0 +1,139 @@
+@import "../variables.scss";
+
+.container-box {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header-box {
+    background: $zhyre-main;
+    display: flex;
+    padding: 15px;
+    border-radius: 25px 25px 0 0;
+}
+
+.grp-img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.grp-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 2px white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.grp-img .i1 {
+    z-index: 1;
+}
+
+.grp-info {
+    padding: 0 15px;
+}
+
+.grp-name {
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: $zhyre-ll;
+    font-size: 16px;
+    text-align: left;
+}
+
+.grp-status {
+    color: $zhyre-ll;
+    font-size: 12px;
+    text-align: left;
+}
+
+.chatbox {
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: $zhyre-ll;
+    border-radius: 0 0 25px 25px;
+    height: auto;
+}
+
+.chatbox .chat {
+    display: flex;
+    gap: 15px;
+}
+
+.chatbox img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 2px white;
+}
+
+.chatbox .msg {
+    background: $zhyre-ld;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    font-size: 14px;
+    text-align: start;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.msg ion-icon {
+    font-size: 20px;
+    color: #3a384c;
+    position: absolute;
+    top: 10px;
+}
+
+.chatbox .chat:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.chatbox .chat:nth-child(odd) ion-icon {
+    left: -14px;
+}
+
+.chatbox .chat:nth-child(even) ion-icon {
+    right: -14px;
+    transform: rotate(180deg);
+}
+
+
+.close {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ff6969;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+}
+
+.close:hover {
+    box-shadow: #292739 0 0 10px 10px;
+}
+
+.close:hover ion-icon {
+    transform: rotate(360deg);
+}
+
+.close ion-icon {
+    font-size: 40px;
+}

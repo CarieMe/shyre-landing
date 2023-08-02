@@ -30,3 +30,10 @@ $(document).ready(function () {
     });
   }, 400);
 });
+
+$(document).ready(function () {
+  $('.btn-start').click(function () {
+    $('.step-wrapper').toggleClass('move-line');
+  });
+
+});

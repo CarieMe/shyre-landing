@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ getFaviconUrl() }}" type="image/png">
+    <link rel="icon" href="{{ asset('assets/images/img/fav.png') }}" type="image/png">
     @if(!empty($metas))
     @if($metas['meta_description'])
     <meta name="description" content="{{$metas['meta_description']}}">
@@ -37,6 +37,8 @@
     <script src="{{ mix('assets/js/front-third-party.js') }}"></script>
 
     <script src="{{ asset('assets/js/messages.js') }}"></script>
+
+    <script src="{{ asset('assets/svg/gradient.svg') }}"></script>
 
     <script src="{{ mix('assets/js/style-plugins.js') }}"></script>
 
@@ -89,6 +91,5 @@
         @include('front.layouts.footer')
     </div>
 </body>
-
 
 </html>

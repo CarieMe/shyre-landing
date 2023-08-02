@@ -1,0 +1,325 @@
+// .dashboard {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     background-size: cover;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// .container {
+//     position: absolute;
+//     width: 80%;
+//     height: 80%;
+//     background-color: rgba(0, 0, 0, .3);
+//     border-radius: 15px;
+//     backdrop-filter: blur(15px);
+// }
+
+// .menuBar {
+//     position: relative;
+//     height: 50px;
+//     border-bottom: 2px solid rgba(255, 255, 255, .1);
+//     padding: 0 20px 0 20px;
+//     display: flex;
+//     align-items: center;
+// }
+
+// .buttons {
+//     display: flex;
+//     align-items: center;
+//     gap: 10px;
+//     width: 230px;
+// }
+
+// button {
+//     width: 15px;
+//     height: 15px;
+//     border-radius: 50%;
+//     outline: none;
+//     border: none;
+//     transition: all .5s;
+// }
+
+// .close {
+//     background-color: lightcoral;
+// }
+
+// .min {
+//     background-color: gold;
+// }
+
+// .max {
+//     background-color: #78cfb5;
+// }
+
+// button:active {
+//     transform: scale(.8);
+//     filter: brightness(.8);
+// }
+
+// .tabs {
+//     display: flex;
+//     height: 100%;
+//     align-items: center;
+// }
+
+// ul {
+//     list-style-type: none;
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+// }
+
+// ul li {
+//     color: gray;
+//     display: inline-block;
+//     transition: all .2s;
+//     height: 100%;
+//     width: 100px;
+//     line-height: 50px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// ul li:hover,
+// ul li:focus {
+//     color: white;
+//     border-bottom: 2px solid white;
+// }
+
+// .search {
+//     margin: 0;
+//     padding: 0;
+//     padding-left: 40px;
+//     height: 80%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: #14162b;
+//     border-radius: 5px;
+
+//     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56.966 56.966' fill='%23717790c7'%3e%3cpath d='M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z'/%3e%3c/svg%3e");
+//     background-size: 14px;
+//     background-repeat: no-repeat;
+//     background-position: 16px 48%;
+// }
+
+// .searchBar {
+//     border-radius: 5px;
+//     position: relative;
+//     border: none;
+//     width: 90%;
+//     height: 100%;
+//     background-color: #14162b;
+//     box-shadow: none;
+//     color: rgba(255, 255, 255, .7);
+// }
+
+// input:focus {
+//     outline: none !important;
+// }
+
+// .user-info {
+//     padding-left: 30px;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     align-items: center;
+// }
+
+// .notification {
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+// }
+
+// .notification::after {
+//     content: "3";
+//     position: relative;
+//     width: 18px;
+//     height: 18px;
+//     right: 35%;
+//     top: -10px;
+//     border-radius: 50%;
+//     background-color: #3a6df0;
+//     font-size: 10px;
+//     text-align: center;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .notification svg {
+//     transform: scale(.7);
+// }
+
+// .cloud {
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .profile {
+//     width: 30px;
+//     height: 30px;
+//     background-image: url("https://picsum.photos/id/171/300/300");
+//     background-size: contain;
+//     border-radius: 50%;
+//     border: 2px solid white;
+// }
+
+// .main {
+//     position: relative;
+//     height: inherit;
+//     width: 100%;
+//     display: inline-flex;
+// }
+
+// .sideBar {
+//     position: relative;
+//     width: 250px;
+//     height: 100%;
+//     border-right: 2px solid rgba(255, 255, 255, .1);
+//     overflow: scroll;
+// }
+
+// .scroll {
+//     padding: 20px;
+//     height: 100%;
+// }
+
+// ol {
+//     list-style-type: none;
+// }
+
+// ol li {
+//     font-size: 15px;
+//     color: gray;
+// }
+
+// ol li ol {
+//     padding: 10px;
+// }
+
+// ol li ol li {
+//     font-size: 13px;
+//     color: white;
+//     height: 30px;
+//     display: flex;
+//     align-items: center;
+//     transition: all .3s;
+//     border-radius: 5px;
+// }
+
+// ol li ol li:hover {
+//     font-size: 13px;
+//     color: white;
+//     height: 30px;
+//     background-color: rgba(0, 0, 0, .2);
+// }
+
+// svg {
+//     position: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .update::after {
+//     content: "3";
+//     position: absolute;
+//     width: 20px;
+//     height: 20px;
+//     right: 15%;
+//     border-radius: 50%;
+//     background-color: #3a6df0;
+//     font-size: 10px;
+//     text-align: center;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .page {
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .main-tabs {
+//     position: sticky;
+//     display: flex;
+//     height: 70px;
+//     flex-direction: row;
+//     align-items: center;
+//     border-bottom: 2px solid rgba(255, 255, 255, .1);
+// }
+
+// .all {
+//     width: 100px;
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     cursor: pointer;
+// }
+
+// .empty {
+//     width: 150px;
+// }
+
+// .menus {
+//     width: 200px;
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// [type="radio"] {
+//     position: relative;
+//     vertical-align: middle;
+//     appearance: none;
+// }
+
+// [type="radio"]+label {
+//     position: relative;
+//     color: gray;
+//     transition: all .2s;
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     padding: 0 20px 0 20px;
+// }
+
+// [type="radio"]:hover+label {
+//     color: white;
+//     border-bottom: 2px solid white;
+// }
+
+// [type="radio"]:checked+label {
+//     color: white;
+//     border-bottom: 2px solid white;
+// }
+
+// .content {
+//     position: relative;
+//     width: -moz-available;
+//     height: inherit;
+//     padding: 20px 40px;
+//     background-color: rgba(0, 0, 0, .3);
+//     overflow: scroll;
+// }
+
+
+// .advertise {
+//     width: inherit;
+//     height: 200px;
+//     background-image: url("https://www.transparenttextures.com/patterns/cubes.png"), linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+//     border-radius: 10px;
+// }

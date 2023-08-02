@@ -31,6 +31,8 @@ mix.scripts([
 ], 'public/assets/js/style-plugins.js').version()
 
 mix.js([
+    'resources/assets/js/style/chat.js',
+    'resources/assets/js/style/graph.js',
     'resources/assets/js/style/style-common.js',
     'resources/assets/js/style/style-loader.js',
     'resources/assets/js/style/style-menu.js',

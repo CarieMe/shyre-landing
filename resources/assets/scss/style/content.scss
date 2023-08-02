@@ -42,12 +42,12 @@ banner
 
 .sb-banner.sb-banner-sm .sb-main-title-frame {
   height: auto;
-  padding: 210px 0 90px;
+  padding: 150px 0 150px 0;
 }
 
 .sb-banner.sb-banner-xs .sb-main-title-frame {
   height: auto;
-  padding: 210px 0 90px;
+  padding: 100px 0 100px 0;
 }
 
 .sb-banner.sb-banner-xs .sb-main-title-frame .sb-main-title {
@@ -56,8 +56,12 @@ banner
   align-items: center;
 }
 
-.sb-banner.sb-banner-color {
-  background-color: $dark-light;
+.sb-banner.sb-banner-light {
+  background-color: $zhyre-ll;
+}
+
+.sb-banner.sb-banner-dark {
+  background-color: $zhyre-ld;
 }
 
 @media (max-width: 992px) {
@@ -106,7 +110,7 @@ banner
 
   .sb-banner.sb-banner-sm .sb-main-title-frame {
     height: auto;
-    padding: 150px 0 60px;
+    padding: 100px 0 100px !important;
   }
 
   .sb-banner.sb-banner-xs .sb-main-title-frame {

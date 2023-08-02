@@ -23,7 +23,7 @@ top bar
   top: 0;
   left: 0;
   right: 0;
-  background-color: $zhyre-main;
+  background-color: $zhyre-ll;
 
 }
 
@@ -83,7 +83,8 @@ top bar
 }
 
 .sb-top-bar-frame.sb-scroll {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: $zhyre-ld;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .sb-top-bar-frame.sb-scroll .sb-top-bar {

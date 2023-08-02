@@ -55,10 +55,6 @@ ul li {
   color: $main-light !important;
 }
 
-.sb-fmd {
-  color: $main-dark !important;
-}
-
 .sb-fdl {
   color: $dark-light !important;
 }
@@ -92,12 +88,12 @@ ul li {
 }
 
 .sec-pad {
-  // padding-top: $sec-top-bot-web !important;
-  // padding-bottom: $sec-top-bot-web !important;
+  padding-top: $sec-top-bot-web !important;
+  padding-bottom: $sec-top-bot-web !important;
 
   @media (max-width: 576px) {
-    // padding-top: $sec-top-bot-mob !important;
-    // padding-bottom: $sec-top-bot-mob !important;
+    padding-top: $sec-top-bot-mob !important;
+    padding-bottom: $sec-top-bot-mob !important;
   }
 }
 
@@ -142,13 +138,13 @@ h6 {
 .sb-h1,
 h1 {
   line-height: 100%;
-  font-size: 72px;
-  font-weight: 200;
+  font-size: 65px;
+  font-weight: 800;
 }
 
 .sb-h1 span,
 h1 span {
-  color: $main-light;
+  color: $zhyre-main;
 }
 
 .sb-h2,
@@ -203,8 +199,8 @@ h5 {
 
   .sb-h1,
   h1 {
-    font-size: 54px;
-    letter-spacing: -2px;
+    font-size: 40px;
+    line-height: 1.2;
   }
 
   .sb-h2,

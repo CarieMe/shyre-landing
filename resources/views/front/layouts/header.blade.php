@@ -4,7 +4,7 @@
         <div class="sb-top-bar">
             <a href="home-2.html" class="sb-logo-frame">
                 <!-- logo img -->
-                <img src="{{ asset('assets/ui/img/logo.svg') }}" alt="vkardz">
+                <img src="{{ asset('assets/images/img/logo.png') }}" alt="zhyre">
             </a>
             <!-- menu -->
             <div class="sb-right-side">

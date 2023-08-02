@@ -1,0 +1,26 @@
+@import "../variables.scss";
+
+.sb-section {
+    position: relative;
+    padding: 100px 0 100px 0;
+}
+
+@media (min-width: 768px) {
+    .sb-section {
+        padding: 60px 0 60px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .sb-section {
+        padding: 60px 0 60px 0;
+    }
+}
+
+.sb-section-dark {
+    background-color: $zhyre-ld;
+}
+
+.sb-section-light {
+    background-color: $zhyre-ll;
+}

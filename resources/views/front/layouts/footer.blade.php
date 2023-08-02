@@ -1,5 +1,3 @@
-
- 
 <!-- start subscribe section -->
 {{--<section class="subscribe-section padding-t-100px padding-b-100px">--}}
 {{-- <div class="container">--}}
@@ -89,7 +87,7 @@
 
 
 <!-- start subscribe section -->
-<section class="sb-banner sb-bdl sec-pad">
+<section class="sb-banner sec-pad">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
@@ -115,7 +113,7 @@
 
 
 <!-- start footer section -->
-<footer class="sb-banner sec-pad sb-bdd sb-remove-top">
+<footer class="sb-banner sec-pad sb-remove-top">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-4 col-xl-4 me-auto mb-lg-0">
@@ -180,7 +178,7 @@
                         </ul>
 
                         <h4 class="sb-footer-after">Recent blogs</h4>
-                        <ul class="sb-footer-blogs">
+                        <!-- <ul class="sb-footer-blogs">
                             <li><a href="#"><img src="{{ asset('assets/ui/products/pr.png')}}" alt="Blog Image 1"></a></li>
                             <li><a href="#"><img src="{{ asset('assets/ui/products/pr.png')}}" alt="Blog Image 1"></a></li>
                             <li><a href="#"><img src="{{ asset('assets/ui/products/pr.png')}}" alt="Blog Image 1"></a></li>
@@ -188,7 +186,7 @@
                             <li><a href="#"><img src="{{ asset('assets/ui/products/pr.png')}}" alt="Blog Image 1"></a></li>
                             <li><a href="#"><img src="{{ asset('assets/ui/products/pr.png')}}" alt="Blog Image 1"></a></li>
                             <li><a href="#"><img src="{{ asset('assets/ui/products/pr.png')}}" alt="Blog Image 1"></a></li>
-                        </ul>
+                        </ul> -->
                     </div>
 
                 </div>

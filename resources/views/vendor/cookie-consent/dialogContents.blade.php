@@ -1,6 +1,4 @@
-
- 
-<div class="js-cookie-consent cookie-consent  bottom-0 position-sticky  d-flex align-items-center text-center justify-content-center  bg-darkblue">
+<!-- <div class="js-cookie-consent cookie-consent  bottom-0 position-sticky  d-flex align-items-center text-center justify-content-center  bg-darkblue">
     <div class="align-items-center">
         <div class="m-3 ">
             <p class="cookie-consent__message text-white">
@@ -16,4 +14,4 @@
             </button>
         </div>
     </div>
-</div>
+</div> -->
