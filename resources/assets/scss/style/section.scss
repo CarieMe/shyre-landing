@@ -24,3 +24,8 @@
 .sb-section-light {
     background-color: $zhyre-ll;
 }
+
+.sb-section-background {
+    background-image: linear-gradient(rgba(220, 220, 220, .4) 0em, transparent .1em), linear-gradient(90deg, rgba(222, 222, 222, .2) .1em, transparent .1em);
+    background-size: 2em 2em;
+}

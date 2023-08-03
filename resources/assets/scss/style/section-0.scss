@@ -1,0 +1,398 @@
+@import "../variables.scss";
+
+/***************************
+
+banner
+
+***************************/
+.sb-hero.sb-hero-with-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.sb-hero.sb-hero-with-bg .sb-bg-banner {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+
+}
+
+.sb-hero.sb-hero-with-bg .sb-bg-banner img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  animation: zoom 40s infinite ease-in-out;
+}
+
+.sb-hero .sb-hero-frame {
+  padding-top: 7vh;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .sb-hero.sb-hero-hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+}
+
+.sb-hero .sb-hero-frame .sb-hero-title {
+  width: 100%;
+
+}
+
+.sb-hero.sb-hero-sm .sb-hero-frame {
+  height: auto;
+  padding: 150px 0 150px 0;
+}
+
+.sb-hero.sb-hero-xs .sb-hero-frame {
+  height: auto;
+  padding: 100px 0 100px 0;
+}
+
+.sb-hero.sb-hero-xs .sb-hero-frame .sb-hero-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sb-hero.sb-hero-light {
+  background-color: $zhyre-ll;
+}
+
+.sb-hero.sb-hero-hero {
+  background: $zhyre-ll;
+  background: linear-gradient(180deg, $zhyre-ll, $zhyre-ld);
+}
+
+.sb-hero.sb-hero-dark {
+  background-color: $zhyre-ld;
+}
+
+@media (max-width: 992px) {
+  .sb-hero {
+    height: 100vh;
+  }
+
+  .sb-hero.sb-hero-with-bg {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 30vh;
+
+  }
+
+  .sb-hero.sb-hero-with-bg .sb-bg-banner {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .sb-hero.sb-hero-with-bg .sb-bg-banner img {
+    transform: rotate(90deg);
+    position: absolute;
+    right: 0;
+    left: 0;
+    right: auto;
+    top: 0;
+    height: 150%;
+    width: 100vh;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .sb-hero .sb-hero-frame {
+    height: auto;
+    padding: 150px 0 30px;
+  }
+
+  .sb-hero .sb-hero-frame .sb-hero-title {
+    text-align: center;
+  }
+
+  .sb-hero.sb-hero-sm .sb-hero-frame {
+    height: auto;
+    padding: 100px 0 100px !important;
+  }
+
+  .sb-hero.sb-hero-xs .sb-hero-frame {
+    height: auto !important;
+    padding: 100px 0 40px !important;
+  }
+
+  .sb-hero.sb-hero-xs .sb-hero-frame .sb-hero-title {
+    flex-direction: column;
+  }
+
+  .sb-hero.sb-hero-xs .sb-hero-frame .sb-hero-title h1 {
+    margin-bottom: 20px;
+  }
+
+  .sb-hero.sb-hero-color {
+    background-color: $dark-dark;
+    border: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .sb-hero.sb-hero-with-bg .sb-bg-banner img {
+    height: 110%;
+  }
+}
+
+.square {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  animation: square 10s linear infinite;
+  animation-delay: calc(-1s * var(--i));
+}
+
+@keyframes square {
+
+  0%,
+  100% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.square:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  right: 400px;
+}
+
+.square:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  top: 120px;
+  left: 360px;
+  z-index: 2;
+}
+
+.square:nth-child(3) {
+  width: 60px;
+  height: 60px;
+  top: 350px;
+  left: 780px;
+  z-index: 2;
+}
+
+.square:nth-child(4) {
+  width: 50px;
+  height: 50px;
+  top: 280px;
+  left: 870px;
+  z-index: 2;
+}
+
+.square:nth-child(5) {
+  width: 50px;
+  height: 50px;
+  top: 350px;
+  left: 350px;
+}
+
+.square:nth-child(6) {
+  width: 85px;
+  height: 85px;
+  top: 450px;
+  left: 350px;
+  z-index: 2;
+}
+
+
+@media (max-width: 767px) {
+  .square:nth-child(1) {
+    top: -50px;
+    left: 100px;
+  }
+
+  .square:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    top: -30px;
+    left: 300px;
+    z-index: 2;
+  }
+
+  .square:nth-child(3) {
+    top: -160px;
+    left: 200px;
+    z-index: 2;
+  }
+
+  .square:nth-child(4) {
+    top: -200px;
+    left: 300px;
+  }
+
+  .square:nth-child(5) {
+    top: 70px;
+    left: 200px;
+  }
+
+  .square:nth-child(6) {
+    top: -190px;
+    left: 60px;
+    z-index: 2;
+  }
+}
+
+
+
+.sb-hero-sendbox {
+  border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background: rgba(240, 240, 240, 0.25);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  border: 12px solid rgba(222, 242, 241, 0.657);
+  overflow: hidden;
+}
+
+.sb-hero-sendbox-container {
+  background: rgb(58, 175, 169);
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+  padding: 0 1px 0 15px;
+
+}
+
+.chat-icon {
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.chat-icon-icon {
+  text-align: center;
+}
+
+.chat-content {
+  display: flex;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  border-radius: 20px;
+}
+
+.left-chat {
+  margin: 0 150px 40px 20px;
+  border-radius: 0px 15px 15px 15px;
+  justify-content: start;
+  text-align: start;
+  padding: 15px 0px 0px 15px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  border: 4px solid rgba(222, 242, 241, 0.657);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.right-chat {
+  margin: 20px 20px 30px 150px;
+  border-radius: 15px 0px 15px 15px;
+  justify-content: start;
+  text-align: start;
+  padding: 15px 0px 0px 15px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  border: 4px solid rgba(222, 242, 241, 0.657);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.left-chat,
+.right-chat p {
+  font-size: 14px;
+}
+
+.sb-typing {
+  justify-content: start;
+}
+
+.sb-typing p {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: start;
+  overflow: hidden;
+  margin: 0 !important;
+  padding-bottom: 14px;
+  padding-top: 14px;
+
+}
+
+.sb-typing p span.typed-text {
+  font-weight: bold;
+  color: $zhyre-main;
+}
+
+.sb-typing p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+.sb-typing p span.cursor.typing {
+  animation: none;
+}
+
+@media (min-width: 768px) {
+  .sb-hero-sendbox {
+    margin: 0 400px;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+
+  49% {
+    background-color: #ccc;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  99% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: #ccc;
+  }
+}

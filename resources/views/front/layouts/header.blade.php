@@ -66,13 +66,15 @@
                 </nav>
                 <div class="sb-buttons-frame">
                     <!-- button -->
-                    <div class="sb-btn sb-m-0">
-                        <i class="sb-cart-number">Control</i>
-                        <a href="{{ route('login') }}">
-                            <span class="sb-icon sb-head">
-                                <img src="{{ asset('assets/ui/icons/dashboard-l.svg') }}" alt="icon">
-                            </span></a>
-
+                    <div>
+                        <a href="menu-1.html" class="sb-btn sb-btn-inv">
+                            Login
+                        </a>
+                    </div>
+                    <div>
+                        <a href="menu-1.html" class="sb-btn sb-btn-sm">
+                            Create an account
+                        </a>
                     </div>
                     <!-- button end -->
                     <!-- menu btn -->

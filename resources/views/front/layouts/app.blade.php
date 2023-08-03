@@ -38,8 +38,6 @@
 
     <script src="{{ asset('assets/js/messages.js') }}"></script>
 
-    <script src="{{ asset('assets/svg/gradient.svg') }}"></script>
-
     <script src="{{ mix('assets/js/style-plugins.js') }}"></script>
 
     <script src="{{ mix('assets/js/style.js') }}"></script>

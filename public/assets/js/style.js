@@ -907,6 +907,50 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./resources/assets/js/style/typer.js":
+/*!********************************************!*\
+  !*** ./resources/assets/js/style/typer.js ***!
+  \********************************************/
+/***/ (() => {
+
+document.addEventListener("DOMContentLoaded", function () {
+  var typedTextSpan = document.querySelector(".typed-text");
+  var cursorSpan = document.querySelector(".cursor");
+  var textArray = ["whatsapp", "messanger", "website", "email"];
+  var typingDelay = 200;
+  var erasingDelay = 100;
+  var newTextDelay = 2000;
+  var textArrayIndex = 0;
+  var charIndex = 0;
+  function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
+      if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+      typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingDelay);
+    } else {
+      cursorSpan.classList.remove("typing");
+      setTimeout(erase, newTextDelay);
+    }
+  }
+  function erase() {
+    if (charIndex > 0) {
+      if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+      typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, erasingDelay);
+    } else {
+      cursorSpan.classList.remove("typing");
+      textArrayIndex++;
+      if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+      setTimeout(type, typingDelay + 1100);
+    }
+  }
+  if (textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+/***/ }),
+
 /***/ "./resources/assets/scss/main.scss":
 /*!*****************************************!*\
   !*** ./resources/assets/scss/main.scss ***!
@@ -1057,6 +1101,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["assets/css/public"], () => (__webpack_require__("./resources/assets/js/style/typer.js")))
 /******/ 	__webpack_require__.O(undefined, ["assets/css/public"], () => (__webpack_require__("./resources/assets/js/style/chat.js")))
 /******/ 	__webpack_require__.O(undefined, ["assets/css/public"], () => (__webpack_require__("./resources/assets/js/style/graph.js")))
 /******/ 	__webpack_require__.O(undefined, ["assets/css/public"], () => (__webpack_require__("./resources/assets/js/style/style-common.js")))

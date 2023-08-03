@@ -8,7 +8,6 @@ buttons
 
 .sb-btn {
   opacity: 1;
-  padding: 0 5px;
   cursor: pointer;
   position: relative;
   display: inline-flex;
@@ -17,15 +16,49 @@ buttons
   height: 50px;
   letter-spacing: 0;
   font-size: 14px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  padding: 0;
+  margin: 0;
   background-color: $transparent;
   transition: 0.3s ease-in-out;
   border-radius: 5px;
+  white-space: nowrap;
 }
 
 .sb-btn.sb-btn-outline {
   border: 1px solid $light-light;
+}
+
+.sb-btn.sb-btn-sm {
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 10px;
+  padding: 5px 15px 5px 15px;
+  font-size: 14px;
+  background-color: $zhyre-main;
+  color: $zhyre-ll;
+  border: 1px solid $light-light;
+}
+
+.sb-btn.sb-btn-sm:hover {
+  background-color: $zhyre-main;
+  color: $zhyre-dd;
+}
+
+.sb-btn.sb-btn-inv {
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 10px;
+  padding: 5px 15px 5px 15px;
+  font-size: 14px;
+  color: $zhyre-dd;
+}
+
+.sb-btn.sb-btn-inv:hover {
+  color: $zhyre-main;
 }
 
 .sb-btn.sb-btn-filled {
@@ -68,7 +101,7 @@ buttons
   background-color: $main-light;
 }
 
-.sb-btn-center-content {
+.sb-btn-center {
   display: flex;
   justify-content: center;
   align-items: center;

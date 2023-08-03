@@ -6,14 +6,46 @@
 
 <!-- HERO -->
 
-<section class="sb-banner sb-banner-light">
+<section class="sb-hero sb-hero-hero">
     <div class="container">
-        <div class="sb-main-title-frame">
-            <div class="sb-main-title text-center">
-                <h1 class="sb-mb-30 sb-h1"><span>Zhyre</span> support:<br> boost <span>sales</span> with ease!</h1>
-                <p class="sb-text sb-text-lg sb-mb-30">Maximize Client Retention with Zhyre CRM - Elevate Engagement,
-                    <br> Deliver Exceptional Support, and Cultivate Lasting Connections.
+        <div class="sb-hero-frame">
+            <div class="sb-hero-title text-center">
+                <div class="square" style="--i:0;"></div>
+                <div class="square" style="--i:1;"></div>
+                <div class="square" style="--i:2;"></div>
+                <div class="square" style="--i:3;"></div>
+                <div class="square" style="--i:4;"></div>
+                <div class="square" style="--i:5;"></div>
+                <div class="sb-hero-sendbox sb-mb-30">
+                    <div class="right-chat">
+                        <p> This is the message</p>
+                    </div>
+
+                    <div class="left-chat">
+                        <p>Hi there! 👋 I'm 🤖 zhyre, and I'll do my best to help you out. Please let me know how can I help 🧠.</p>
+                    </div>
+                    <div class="row sb-hero-sendbox-container">
+                        <div class="col-1">
+                            <div class="chat-icon">
+                                <i class="fa fa-paperclip chat-icon-icon" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-10 chat-content sb-typing">
+                            <p>💬 Zhyre is available <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+                        </div>
+                        <div class="col-1">
+                            <div class="chat-icon">
+                                <i class="far fa-paper-plane chat-icon-icon" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="sb-h1">Boost <span>sales</span> with ease!</h1>
+                <h1 class="sb-mb-30 sb-h1">Support with <span>zhyre</span></h1>
+                <p class="sb-text sb-text-lg sb-mb-30">Never leave your customers unattended.
                 </p>
+
                 <a href="menu-1.html" class="sb-btn sb-btn-filled">
                     <span class="sb-icon">
                         <img src="{{ asset('assets/ui/icons/card-l.svg') }}" alt="icon">
@@ -26,6 +58,7 @@
                     </span>
                     <span>Select card</span>
                 </a>
+
             </div>
         </div>
     </div>
@@ -106,7 +139,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <div id="graph-container"></div>
+                <!-- <div id="graph-container"></div> -->
             </div>
             <div class="col-lg-4">
                 <div class="sb-sec-7-box">
@@ -131,7 +164,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="sb-sec-7-box-5">
-                    <div class="line-container">
+                    <!-- <div class="line-container">
                         <div class="step-wrapper move-line">
                             <article class="linestep linestep1" style="left: 34%; top: -2%;">
                                 <span class="num"> This is the one</span>
@@ -149,7 +182,7 @@
                                 <path class="path" d="m560.30957,10.588011c0,0 438.0947,1.90476 439.04708,1.90476c0.95238,0 144.57857,-1.02912 143.80934,137.14269c-0.76923,138.17181 -116.81095,142.30859 -131.61967,143.8923c-14.80873,1.58372 -840.41472,-0.71429 -860.5941,0.71429c-20.17938,1.42858 -148.4991,6.80903 -146.83244,147.05973c1.66666,140.2507 129.52365,152.14266 129.33243,151.27321c0.19122,0.86945 415.268425,2.687632 415.42748,0" />
                             </svg>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-4">
@@ -162,19 +195,68 @@
 </section>
 
 
-<section class="sb-section sb-section-light">
+<section class="sb-section sb-section-light sb-section-background">
     <div class="container">
-        <div class="sb-card">
-            <div class="text-center">
-                <h1 class="sb-mb-30 sb-capital">Make an <span>impact</span> <br>always tap with <br><span>vkardz</span></h1>
-                <p class="">Make an impact, tap with vkardz, <br>and leave a lasting connection and impression </p>
+        <div class="sb-chatbox-sec">
+            <div class="row">
+                <div class="row">
+                    <div class="col-lg-7"></div>
+                    <div class="col-lg-5">
+                        <div class="container-box">
+                            <div class="header-box">
+                                <div class="grp-img">
+                                    <img class="i1" src="https://images.unsplash.com/photo-1660476705851-21e527337f9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                                </div>
+                                <div class="grp-info">
+                                    <h3 class="grp-name">
+                                        Elnora, Lelia, Lucinda
+                                    </h3>
+                                    <p class="grp-status">
+                                        We tipically reply in a few minutes
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="chatbox">
+                                <div class="chat">
+                                    <img src="https://images.unsplash.com/photo-1657299143482-4f4ea1ebd71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                                    <p class="msg">
+                                        <ion-icon name="caret-back-outline"></ion-icon>
+                                        Hi there! <br>
+                                        Looking to get started? I can help answer to your questions!
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    <img src="https://images.unsplash.com/photo-1660481451479-7ad6d6ad0223?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                                    <p class="msg">
+                                        <ion-icon name="caret-back-outline"></ion-icon>
+                                        I need a laptop 😊
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    <img src="https://images.unsplash.com/photo-1657299143482-4f4ea1ebd71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                                    <p class="msg">
+                                        <ion-icon name="caret-back-outline"></ion-icon>
+                                        What kind of laptop your looking for? Mam
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    <img src="https://images.unsplash.com/photo-1660481451479-7ad6d6ad0223?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                                    <p class="msg">
+                                        <ion-icon name="caret-back-outline"></ion-icon>
+                                        A gaming one 😅
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- <a href="#" class="close">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
-
-
 
 <section class="sb-section sb-section-light">
     <div class="container">
@@ -556,55 +638,7 @@
 </section>
 
 <section class="sb-section sb-section-dark text-center">
-    <div class="container-box">
-        <div class="header-box">
-            <div class="grp-img">
-                <img class="i1" src="https://images.unsplash.com/photo-1660476705851-21e527337f9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
-            </div>
-            <div class="grp-info">
-                <h3 class="grp-name">
-                    Elnora, Lelia, Lucinda
-                </h3>
-                <p class="grp-status">
-                    We tipically reply in a few minutes
-                </p>
-            </div>
-        </div>
-        <div class="chatbox">
-            <div class="chat">
-                <img src="https://images.unsplash.com/photo-1657299143482-4f4ea1ebd71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
-                <p class="msg">
-                    <ion-icon name="caret-back-outline"></ion-icon>
-                    Hi there! <br>
-                    Looking to get started? I can help answer to your questions!
-                </p>
-            </div>
-            <div class="chat">
-                <img src="https://images.unsplash.com/photo-1660481451479-7ad6d6ad0223?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
-                <p class="msg">
-                    <ion-icon name="caret-back-outline"></ion-icon>
-                    I need a laptop 😊
-                </p>
-            </div>
-            <div class="chat">
-                <img src="https://images.unsplash.com/photo-1657299143482-4f4ea1ebd71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
-                <p class="msg">
-                    <ion-icon name="caret-back-outline"></ion-icon>
-                    What kind of laptop your looking for? Mam
-                </p>
-            </div>
-            <div class="chat">
-                <img src="https://images.unsplash.com/photo-1660481451479-7ad6d6ad0223?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
-                <p class="msg">
-                    <ion-icon name="caret-back-outline"></ion-icon>
-                    A gaming one 😅
-                </p>
-            </div>
-        </div>
-        <a href="#" class="close">
-            <ion-icon name="close-outline"></ion-icon>
-        </a>
-    </div>
+
 </section>
 
 @endsection
